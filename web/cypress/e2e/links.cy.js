@@ -6,7 +6,7 @@ describe('Links abrindo nova guia/janela', ()=>{
             .should('have.attr','href', 'https://www.instagram.com/qapapito')
             .and('have.attr','target', '_blank')
     })
-    it.only('Acessa link de termos de uso removendo o target blank', ()=>{
+    it('Acessa link de termos de uso removendo o target blank', ()=>{
         cy.start()
         cy.submitLoginForm('papito@webdojo.com', 'katana123')
         cy.goTo('Formulários', 'Consultoria')
